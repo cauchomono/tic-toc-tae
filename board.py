@@ -36,4 +36,4 @@ class Board:
         fila_3 = f"\n{wall}\n{mid_3}\n{wall}\n{floor}"
 
         board_image = fila_1 + fila_2 + fila_3  # Estructura del tablero
-        return board_image
+        print(board_image)
