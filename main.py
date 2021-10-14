@@ -1,15 +1,20 @@
 from board import  Board
 from controls import Controls
+from ai import Ai
 
 tablero = Board()
 
-jugador1 = Controls(tablero.board)
+
+jugador1 = Controls(tablero.board,"x")
+jugador2= Ai(tablero.board,"o")
 
 
 
-while True:
-    tablero.DisplayBoard()
-    jugador1.EnterMove()
+tablero.DisplayBoard()
+jugador1.movement()
+jugador2.movement()
+
+tablero.DisplayBoard()
 
 
 #TODO 1: Hacer tablero
