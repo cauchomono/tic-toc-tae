@@ -1,8 +1,10 @@
-class Controls:
+from victoryCondition import StatusGame
+
+class Controls(StatusGame):
+
 
     def __init__(self, board, letter):
-        self.board = board
-        self.letter = letter
+        super(Controls, self).__init__(board,letter)
 
 
     def enterMove(self):

@@ -1,22 +1,29 @@
 from controls import Controls
 
-from controls import Controls
+# This AI is a random choice by the machine
+
 class Ai(Controls):
 
     def __init__(self,board,letter):
         super(Ai, self).__init__(board, letter)
 
-        
 
 
     def enterMove(self):
+
         import random
-        numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+        board_elements = []
+        for row in self.board:
+            for element in row:
+                board_elements.append(element)
+
+        numbers = range(1,10)
         condition = True
         while condition:
             computer_move = random.choice(numbers)
-            if computer_move not in self.board:
+            print(self.board)
+            if computer_move in board_elements:
                 condition = False
-                return int(computer_move)
+                return computer_move
 
 

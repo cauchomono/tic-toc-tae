@@ -5,7 +5,7 @@ class Board:
         self.board = board
 
     def DisplayBoard(self,):
-    #Matriz de elementos del tablero
+    #Matrix board elements
 
         center_1 = str(self.board[0][0])
         center_2 = str(self.board[0][1])
@@ -17,15 +17,15 @@ class Board:
         center_8 = str(self.board[2][1])
         center_9 = str(self.board[2][2])
 
-    # Tablero
+    # Draws the board
 
-        esp = 7  # cantidad de espacios entre paredes
-        espm = (esp - 1) // 2  # cantidad de espacioos entre la pared y el centro
-        floor = ("+" + "-" * esp) * 3 + "+"  # delimitaciones horizonales  del tablero
-        wall = ("|" + " " * esp) * 3 + "|"  # delimitaciones verticales
+        esp = 7  # number of spaces between walls
+        espm = (esp - 1) // 2  # number of spaces between center and walls
+        floor = ("+" + "-" * esp) * 3 + "+"  # horizontal delimitations
+        wall = ("|" + " " * esp) * 3 + "|"  # vertical delimitations
 
         mid_1 = ("|" + " " * espm + center_1 + " " * espm) + ("|" + " " * espm + center_2 + " " * espm) + (
-                    "|" + " " * espm + center_3 + " " * espm + "|")  # delimitacion vertical incluyendo el centro
+                    "|" + " " * espm + center_3 + " " * espm + "|")  # vertical delimitation including center
         mid_2 = ("|" + " " * espm + center_4 + " " * espm) + ("|" + " " * espm + center_5 + " " * espm) + (
                     "|" + " " * espm + center_6 + " " * espm + "|")
         mid_3 = ("|" + " " * espm + center_7 + " " * espm) + ("|" + " " * espm + center_8 + " " * espm) + (
@@ -35,5 +35,5 @@ class Board:
         fila_2 = f"\n{wall}\n{mid_2}\n{wall}\n{floor}"
         fila_3 = f"\n{wall}\n{mid_3}\n{wall}\n{floor}"
 
-        board_image = fila_1 + fila_2 + fila_3  # Estructura del tablero
+        board_image = fila_1 + fila_2 + fila_3  # board structure
         print(board_image)
